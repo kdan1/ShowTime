@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.5'
+ruby '2.2.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
@@ -32,9 +32,13 @@ gem 'spring',        group: :development
 
 gem 'puma'
 
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
+gem 'coffee-script-source', '1.8.0'
+
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-

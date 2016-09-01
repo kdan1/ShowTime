@@ -1,0 +1,22 @@
+<p>
+  <strong>Name:</strong>
+  <%= @show.name %>
+</p>
+
+<p>
+  <strong>Synopsis:</strong>
+  <%= @show.synopsis %>
+</p>
+
+<p>
+  <strong>Episodes:</strong>
+  <%= @show.episodes %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @show.score %> / 10
+</p>
+
+<%= link_to "Edit", edit_show_path(@show) %>
+<%= link_to "Delete", show_path(@show), data: {confirm: "Are you sure?"}, method: :delete %>

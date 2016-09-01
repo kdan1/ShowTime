@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  synopsis: MyText
+  episodes: 1
+  score: 1
+  aired: 2016-08-24
+
+two:
+  name: MyString
+  synopsis: MyText
+  episodes: 1
+  score: 1
+  aired: 2016-08-24

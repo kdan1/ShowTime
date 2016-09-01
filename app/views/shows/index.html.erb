@@ -1,0 +1,19 @@
+<h1>All Shows</h1>
+
+<table>
+
+  <% @shows.each do |show| %>
+    <tr>
+      <td><%= show.name %></td>
+      <td><%= show.episodes %> <%= "episode".pluralize(show.episodes) %></td>
+      <td>Score: <%= show.score %> / 10</td>
+      <td><%= link_to 'More details', show_path(show) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<style>
+
+td {
+  padding: 10px;
+}
