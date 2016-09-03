@@ -35,6 +35,7 @@ gem 'puma'
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'coffee-script-source', '1.8.0'
 
+gem 'devise', '~> 4.2'
 
 
 # Use Capistrano for deployment
