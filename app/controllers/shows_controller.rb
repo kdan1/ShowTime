@@ -1,4 +1,6 @@
 class ShowsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_admin, only: [:new]
 
   def index
     @shows = Show.all
@@ -45,5 +47,11 @@ class ShowsController < ApplicationController
 private
   def show_params
     params.require(:show).permit(:name, :synopsis, :episodes, :score, :aired)
+  end
+
+  def authenticate_admin
+    if !current_user.admin
+      render "access_denied"
+    end
   end
 end
