@@ -7,3 +7,4 @@
 <p>Users:</p>
 <p>Regular user - Email: user0@example.com, password: useruser0</p>
 <p>Admin user - Email: admin1@example.com, password: admin1</p>
+</br></br>
