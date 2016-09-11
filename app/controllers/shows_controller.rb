@@ -46,12 +46,16 @@ class ShowsController < ApplicationController
 
 private
   def show_params
-    params.require(:show).permit(:name, :synopsis, :episodes, :score, :aired)
+    params.require(:show).permit(:name, :synopsis, :episodes, :score, :show_img, :aired)
   end
 
   def authenticate_admin
     if !current_user.admin
       render "access_denied"
     end
+  end
+
+  def signed_in?
+    !current_user.nil?
   end
 end

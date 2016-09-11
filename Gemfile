@@ -36,6 +36,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'coffee-script-source', '1.8.0'
 
 gem 'devise', '~> 4.2'
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
 
 # Use Capistrano for deployment

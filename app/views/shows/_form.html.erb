@@ -1,4 +1,4 @@
-<%= form_for(@show) do |f|  %>
+<%= form_for @show, html: { multipart: true } do |form| %>
 <% if @show.errors.any? %>
   <div id="error_explanation">
     <h2>
@@ -12,28 +12,33 @@
     </ul>
   </div>
 <% end %>
-
+<!-- Image upload - for future implementation
   <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <%= form.label :show_img %><br>
+  <%= form.file_field :show_img %>
+  </p>
+-->
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
   </p>
 
   <p>
-    <%= f.label :synopsis %><br>
-    <%= f.text_area :synopsis %>
+    <%= form.label :synopsis %><br>
+    <%= form.text_area :synopsis %>
   </p>
 
   <p>
-    <%= f.label :episodes %><br>
-    <%= f.number_field :episodes, :min => 0 %>
+    <%= form.label :episodes %><br>
+    <%= form.number_field :episodes, :min => 0 %>
   </p>
 
   <p>
-    <%= f.label :score %><br>
-    <%= f.number_field :score, :min => 0, :max => 10 %> / 10
+    <%= form.label :score %><br>
+    <%= form.number_field :score, :min => 0, :max => 10 %> / 10
   </p>
 
 
-    <%= f.submit %>
+    <%= form.submit %>
   </p>
 <% end %>

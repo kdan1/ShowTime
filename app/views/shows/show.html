@@ -1,3 +1,4 @@
+
 <p>
   <strong>Name:</strong>
   <%= @show.name %>
@@ -18,5 +19,7 @@
   <%= @show.score %> / 10
 </p>
 
-<%= link_to "Edit", edit_show_path(@show) %>
-<%= link_to "Delete", show_path(@show), data: {confirm: "Are you sure?"}, method: :delete %>
+<% if current_user.try(:admin?) %>
+  <%= link_to "Edit", edit_show_path(@show) %>
+  <%= link_to "Delete", show_path(@show), data: {confirm: "Are you sure?"}, method: :delete %>
+<% end %>
